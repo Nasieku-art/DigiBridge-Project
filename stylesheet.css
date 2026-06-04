@@ -50,6 +50,7 @@ body {
 .nav-center ul {
   display: flex;
   gap: 2em;
+  font-size: 40px;
 }
 .nav-left img {
   height: 200px;
@@ -403,5 +404,15 @@ body {
 @media (max-width: 740px) {
   .mobile-menu {
     display: block;
+  }
+}
+@media (max-width: 900px) {
+  .nav-center { display: none; }
+  .nav-right .btn-log,
+  .nav-right .btn-sign { display: none; }
+  .hamburger { display: flex; }
+ 
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
