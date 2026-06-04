@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - DigiBridge</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-wrap">
+      <h2 class="form-title">Welcome Back 👋</h2>
+      <p
+        style="
+          text-align: center;
+          color: #aaa;
+          font-size: 13px;
+          font-family: sans-serif;
+          margin-bottom: 1.5rem;
+        "
+      >
+        Login to continue your learning journey
+      </p>
+g
+      <div class="face-wrap">
+        <svg
+          id="face"
+          width="100"
+          height="100"
+          viewBox="0 0 110 110"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <radialGradient id="faceGrad" cx="40%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="#5a5a5a" />
+              <stop offset="100%" stop-color="#1a1a1a" />
+            </radialGradient>
+            <radialGradient id="happyGrad" cx="40%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="#FFE066" />
+              <stop offset="100%" stop-color="#FFD93D" />
+            </radialGradient>
+            <radialGradient id="sadGrad" cx="40%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="#a0c4ff" />
+              <stop offset="100%" stop-color="#4a90d9" />
+            </radialGradient>
+          </defs>
+          <circle
+            id="face-circle"
+            cx="55"
+            cy="55"
+            r="50"
+            fill="url(#faceGrad)"
+          />
+          <g id="angry-brows" opacity="0">
+            <line
+              x1="22"
+              y1="32"
+              x2="46"
+              y2="40"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <line
+              x1="64"
+              y1="40"
+              x2="88"
+              y2="32"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+          </g>
+          <g id="happy-brows" opacity="0">
+            <path
+              d="M 28 36 Q 38 28 48 34"
+              stroke="#b8860b"
+              stroke-width="3"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              d="M 62 34 Q 72 28 82 36"
+              stroke="#b8860b"
+              stroke-width="3"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </g>
+          <g id="sad-brows" opacity="0">
+            <path
+              d="M 28 36 Q 38 44 48 38"
+              stroke="white"
+              stroke-width="3"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <path
+              d="M 62 38 Q 72 44 82 36"
+              stroke="white"
+              stroke-width="3"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </g>
+          <ellipse id="eye-left" cx="37" cy="45" rx="7" ry="8" fill="white" />
+          <ellipse id="eye-right" cx="73" cy="45" rx="7" ry="8" fill="white" />
+          <ellipse
+            id="pupil-left"
+            cx="37"
+            cy="46"
+            rx="4"
+            ry="4.5"
+            fill="#111"
+          />
+          <ellipse
+            id="pupil-right"
+            cx="73"
+            cy="46"
+            rx="4"
+            ry="4.5"
+            fill="#111"
+          />
+          <ellipse
+            cx="39"
+            cy="43"
+            rx="1.5"
+            ry="1.5"
+            fill="white"
+            opacity="0.7"
+          />
+          <ellipse
+            cx="75"
+            cy="43"
+            rx="1.5"
+            ry="1.5"
+            fill="white"
+            opacity="0.7"
+          />
+          <path
+            id="mouth"
+            d="M 38 70 Q 55 65 72 70"
+            stroke="white"
+            stroke-width="3"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <ellipse
+            id="blush-l"
+            cx="22"
+            cy="65"
+            rx="10"
+            ry="6"
+            fill="#FF9999"
+            opacity="0"
+          />
+          <ellipse
+            id="blush-r"
+            cx="88"
+            cy="65"
+            rx="10"
+            ry="6"
+            fill="#FF9999"
+            opacity="0"
+          />
+        </svg>
+      </div>
+
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" id="login-email" placeholder="Enter your email" />
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <input
+          type="password"
+          id="login-password"
+          placeholder="Enter your password"
+        />
+      </div>
+
+      <div class="msg" id="msg"></div>
+
+      <button id="submit-btn" onclick="handleLogin()">Login</button>
+
+      <div class="bottom-links" style="margin-top: 1rem">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+        <br />
+        <a href="index.html" style="display: inline-block; margin-top: 0.5rem"
+          >← Back to Home</a
+        >
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
