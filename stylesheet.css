@@ -16,7 +16,8 @@
 
 body {
   overflow-x: hidden;
-  background: black;
+  /* background: black; */
+  background: linear-gradient(160deg, #000000 0%, #001820 50%, #002a33 100%);
   align-items: center;
   justify-content: center;
   margin: 0;
