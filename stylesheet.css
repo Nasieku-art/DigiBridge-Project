@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-size: 20px; */
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.active {
+  border: 2px solid rgb(0, 213, 255);
+  background-color: rgb(0, 213, 255);
+  color: black;
+}
+
+body {
+  overflow-x: hidden;
+  background: black;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #000;
+  border-bottom: 1px solid rgba(0, 213, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+.nav ul li a:hover {
+  color: rgb(0, 213, 255);
+}
+
+.nav-center ul {
+  display: flex;
+  gap: 2em;
+}
+.nav-left img {
+  height: 200px;
+  width: auto;
+}
+.nav-left {
+  border-radius: 50%;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-log {
+  border: 1px solid rgb(26, 141, 179);
+  color: white;
+  padding: 0.8em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  background: transparent;
+}
+
+.btn-log:hover {
+  background: rgb(0, 213, 255);
+  color: #000;
+}
+.btn-sign {
+  background: rgb(0, 213, 255);
+  color: white;
+  padding: 0.8em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.btn-sign:hover {
+  opacity: 0.85;
+}
+.heading {
+  text-align: center;
+  color: rgb(0, 213, 255);
+  font-size: 20px;
+  padding: 2em;
+}
+.heading2 {
+  font-size: 80px;
+  text-align: center;
+  color: white;
+}
+.paragraph {
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+.sec1 {
+  display: flex;
+  color: white;
+  padding: 1em;
+}
+.main {
+  font-size: 80px;
+}
+.para {
+  color: rgb(0, 213, 255);
+  font-size: 30px;
+}
+.hero-btn-section {
+  display: flex;
+  justify-content: center;
+}
+.btn-begin {
+  background: rgb(0, 213, 255);
+  padding: 1em;
+  border-radius: 8%;
+}
+.main-img {
+  right: 40px;
+}
+.main-img img {
+  border-radius: 20px;
+  width: 400px;
+}
+.main-img {
+  animation: bounce 3s infinite;
+}
+
+.form-wrap {
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #111;
+  border: 0.5px solid #333;
+  border-radius: 12px;
+}
+
+.face-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.hint {
+  color: #666;
+  font-size: 11px;
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0.5px solid #444;
+  background: #1a1a1a;
+  color: white;
+  font-size: 15px;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: rgb(0, 213, 255);
+}
+
+.msg {
+  font-size: 13px;
+  margin-top: 0.5rem;
+  min-height: 18px;
+  text-align: center;
+}
+
+.msg.ok {
+  color: #4caf50;
+}
+.msg.err {
+  color: #f44336;
+}
+.msg.warn {
+  color: #ff9800;
+}
+
+#submit-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  background: rgb(0, 213, 255);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: 500;
+}
+
+#submit-btn:hover {
+  opacity: 0.9;
+}
+
+@keyframes faceShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-8px) rotate(-3deg);
+  }
+  40% {
+    transform: translateX(8px) rotate(3deg);
+  }
+  60% {
+    transform: translateX(-6px) rotate(-2deg);
+  }
+  80% {
+    transform: translateX(6px) rotate(2deg);
+  }
+}
+
+@keyframes btnShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.shake-face {
+  animation: faceShake 0.5s ease;
+}
+.shake-btn {
+  animation: btnShake 0.5s ease;
+}
+
+.footer {
+  background: #050d1a;
+  color: #aaa;
+  padding: 4rem 0 0;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(0, 213, 255, 0.15);
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer-col h4 {
+  color: rgb(0, 213, 255);
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 2rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.footer-socials span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #aaa;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.social-icons a:hover {
+  border-color: rgb(0, 213, 255);
+  color: rgb(0, 213, 255);
+}
+
+.footer-access {
+  text-align: right;
+}
+
+.footer-access p {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.footer-access a {
+  color: rgb(0, 213, 255);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-copy {
+  background: #000;
+  text-align: center;
+  padding: 1rem;
+  font-size: 13px;
+  color: #555;
+  margin-top: 1rem;
+}
+.bot-msg {
+  background: #1a1a1a;
+  color: #ddd;
+  border-radius: 12px 12px 12px 4px;
+  padding: 10px 14px;
+  max-width: 85%;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.user-msg {
+  background: rgb(0, 213, 255);
+  color: #000;
+  border-radius: 12px 12px 4px 12px;
+  padding: 10px 14px;
+  max-width: 85%;
+  align-self: flex-end;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 740px) {
+  .mobile-menu {
+    display: block;
+  }
+}

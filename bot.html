@@ -1,0 +1,40 @@
+
+<div id="bot-wrap">
+
+  <div id="chat-window">
+    <div class="chat-head">
+      <div class="chat-head-left">
+        <div class="chat-ava">🎓</div>
+        <div>
+          <p class="chat-name">Digi Assistant</p>
+          <p class="chat-status">● Online — always ready</p>
+        </div>
+      </div>
+      <button class="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+
+    <div class="chat-msgs" id="chat-messages">
+      <div class="msg-bot">👋 Hi! I'm Digi, your AI learning assistant. How can I help you today?</div>
+    </div>
+
+    <div class="chat-suggestions">
+      <button class="suggestion-btn" onclick="quickAsk('How do I sign up?')">How do I sign up?</button>
+      <button class="suggestion-btn" onclick="quickAsk('What courses do you offer?')">Our courses</button>
+      <button class="suggestion-btn" onclick="quickAsk('I need help')">Get help</button>
+    </div>
+
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Digi anything..."
+        onkeydown="if(event.key==='Enter')sendMessage()"/>
+      <button class="chat-send" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <button class="bubble-btn" id="chat-bubble" onclick="toggleChat()">
+    <div class="bubble-dot"></div>
+    🎓 Chat with Digi
+  </button>
+
+</div>
+
+<script src="bot.js"></script>

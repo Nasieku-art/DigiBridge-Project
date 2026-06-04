@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Digibridge</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="bot.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-logo">Digi<span>bridge</span></div>
+
+      <div class="nav-label">Menu</div>
+      <a class="nav-item active" href="#" data-section="home"
+        ><span class="icon">🏠</span> Dashboard</a
+      >
+      <a class="nav-item" href="#" data-section="courses"
+        ><span class="icon">📚</span> My Courses</a
+      >
+      <a class="nav-item" href="#" data-section="progress"
+        ><span class="icon">📈</span> Progress</a
+      >
+      <a class="nav-item" href="#" data-section="leaderboard"
+        ><span class="icon">🏆</span> Leaderboard</a
+      >
+      <a class="nav-item" href="#" data-section="certificates"
+        ><span class="icon">🏅</span> Certificates</a
+      >
+
+      <div class="nav-label">Account</div>
+      <a class="nav-item" href="#" data-section="profile"
+        ><span class="icon">👤</span> Profile</a
+      >
+      <a class="nav-item" href="index.html"
+        ><span class="icon">🚪</span> Logout</a
+      >
+
+      <div class="sidebar-footer">
+        <div class="user-chip">
+          <div class="avatar" id="sidebar-avatar">MN</div>
+          <div class="user-info">
+            <p id="sidebar-name">Mary Nasieku</p>
+            <span>Learner</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="topbar-left">
+          <h1 id="welcome-msg">Welcome back, Mary 👋</h1>
+          <p>Here's what's happening with your learning today.</p>
+        </div>
+        <div class="topbar-right">
+          <input
+            class="search-bar"
+            type="text"
+            placeholder="🔍  Search courses..."
+          />
+          <div class="notif-btn" id="notif-btn">
+            🔔
+            <div class="notif-dot" id="notif-dot"></div>
+
+            <div class="notif-dropdown" id="notif-dropdown">
+              <div class="notif-header">
+                Notifications
+                <span id="notif-clear" class="notif-clear-btn"
+                  >Mark all read</span
+                >
+              </div>
+              <div class="notif-item unread">
+                📢 AI & Machine Learning course is now live!
+              </div>
+              <div class="notif-item unread">
+                🏅 Your certificate is ready to download.
+              </div>
+              <div class="notif-item">
+                🎉 Bootcamp applications close June 15.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sec-home" class="page-section active">
+        <div class="stats-row">
+          <div class="stat-card accent">
+            <div class="stat-label">Courses Enrolled</div>
+            <div class="stat-value">6</div>
+            <div class="stat-sub">2 in progress</div>
+            <div class="stat-icon">📚</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Hours Learned</div>
+            <div class="stat-value" id="hours-val">48</div>
+            <div class="stat-sub">+3hrs this week</div>
+            <div class="stat-icon">⏱️</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Certificates</div>
+            <div class="stat-value" id="cert-count">2</div>
+            <div class="stat-sub">1 pending</div>
+            <div class="stat-icon">🏅</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Leaderboard Rank</div>
+            <div class="stat-value">#4</div>
+            <div class="stat-sub">Top 10% 🔥</div>
+            <div class="stat-icon">🏆</div>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="section-card">
+            <div class="section-header">
+              <div class="section-title">My Courses</div>
+              <a class="see-all" href="#" data-section="courses">See all →</a>
+            </div>
+            <div class="course-list" id="home-course-list"></div>
+          </div>
+
+          <div class="section-card light">
+            <div class="section-header">
+              <div class="section-title">📢 Announcements</div>
+            </div>
+            <div class="announce-list">
+              <div class="announce-item">
+                <div class="announce-title">New Course Available!</div>
+                <div class="announce-body">
+                  AI & Machine Learning for Beginners is now live. Enrol today.
+                </div>
+                <div class="announce-date">30 May 2026</div>
+              </div>
+              <div class="announce-item">
+                <div class="announce-title">Bootcamp Applications Open</div>
+                <div class="announce-body">
+                  AGCCI Boot Camp 2026 applications are now open. Apply before
+                  June 15.
+                </div>
+                <div class="announce-date">28 May 2026</div>
+              </div>
+              <div class="announce-item">
+                <div class="announce-title">Certificate Ready</div>
+                <div class="announce-body">
+                  Your Data & Financial Inclusion certificate is ready to
+                  download.
+                </div>
+                <div class="announce-date">25 May 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sec-courses" class="page-section">
+        <div class="section-topbar">
+          <h2 class="section-page-title">📚 My Courses</h2>
+        </div>
+        <div id="courses-full-list" class="courses-grid"></div>
+      </div>
+
+      <div id="sec-progress" class="page-section">
+        <h2 class="section-page-title">📈 Skill Progress</h2>
+        <div class="section-card" style="margin-top: 1rem">
+          <div class="progress-section" id="skills-list"></div>
+        </div>
+      </div>
+
+      <div id="sec-leaderboard" class="page-section">
+        <h2 class="section-page-title">🏆 Leaderboard</h2>
+        <div class="section-card" style="margin-top: 1rem">
+          <div class="leader-list" id="leader-list"></div>
+        </div>
+      </div>
+
+      <div id="sec-certificates" class="page-section">
+        <h2 class="section-page-title">🏅 My Certificates</h2>
+        <div id="certs-grid" class="certs-grid" style="margin-top: 1rem"></div>
+      </div>
+
+      <div id="sec-profile" class="page-section">
+        <h2 class="section-page-title">👤 My Profile</h2>
+        <div class="section-card profile-card" style="margin-top: 1rem">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar" id="profile-avatar">MN</div>
+          </div>
+          <div class="profile-fields">
+            <div class="profile-row">
+              <label>Full Name</label
+              ><span id="profile-name">Mary Nasieku</span>
+            </div>
+            <div class="profile-row">
+              <label>Email</label
+              ><span id="profile-email">mary@digibridge.co.ke</span>
+            </div>
+            <div class="profile-row">
+              <label>Role</label><span>Learner</span>
+            </div>
+            <div class="profile-row">
+              <label>Joined</label><span id="profile-joined">—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="cert-modal-bg" id="cert-modal-bg">
+      <div class="cert-modal">
+        <div class="cert-close" id="cert-close">✕</div>
+        <div class="cert-preview" id="cert-preview"></div>
+        <div style="text-align: center; margin-top: 1.5rem">
+          <button class="cert-download-btn" id="cert-download-btn">
+            ⬇ Download Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="bot.js"></script>
+  </body>
+</html>

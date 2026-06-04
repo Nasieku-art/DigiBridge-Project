@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>DigiBridge -AdminPage</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="sidebar">
+        <div id="sidebar-header">
+          <div class="logo">Digi<span>Bridge</span></div>
+          <div class="role">Admin Panel</div>
+        </div>
+        <div id="nav">
+          <div
+            class="nav-item active"
+            onclick="showSection('overview')"
+            data-section="overview"
+          >
+            <i
+              class="fa-solid fa-border-all"
+              style="color: rgb(149, 179, 191)"
+            ></i
+            >Overview
+          </div>
+          <div
+            class="nav-item"
+            onclick="showSection('courses')"
+            data-section="courses"
+          >
+            <i class="fa-solid fa-book" style="color: rgb(48, 162, 210)"></i
+            >Courses
+          </div>
+          <div
+            class="nav-item"
+            onclick="showSection('learners')"
+            data-section="learners"
+          >
+            <i
+              class="fa-duotone fa-solid fa-user-group"
+              style="
+                --fa-primary-color: rgb(121, 222, 230);
+                --fa-secondary-color: rgb(121, 222, 230);
+              "
+            ></i
+            >Learners
+          </div>
+          <div
+            class="nav-item"
+            onclick="showSection('certificates')"
+            data-section="certificates"
+          >
+            <i
+              class="fa-solid fa-certificate"
+              style="color: rgb(120, 207, 213)"
+            ></i
+            >Certificates
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="sec-overview" class="section active">
+        <div class="page-title">Overview</div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="label">Total Courses</div>
+            <div class="value" id="stat-courses">0</div>
+            <div class="sub">Published</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Learners</div>
+            <div class="value" id="stat-learners">0</div>
+            <div class="sub">Registered</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Completions</div>
+            <div class="value" id="stat-completions">0</div>
+            <div class="sub">All time</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Certificates</div>
+            <div class="value" id="stat-certs">0</div>
+            <div class="sub">Issued</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Recent Courses</span>
+            <button class="btn" onclick="showSection('courses')">
+              <i class="ti ti-arrow-right"></i>View all
+            </button>
+          </div>
+          <div id="overview-courses-list"></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Recent Learners</span>
+            <button class="btn" onclick="showSection('learners')">
+              <i class="ti ti-arrow-right"></i>View all
+            </button>
+          </div>
+          <div id="overview-learners-list"></div>
+        </div>
+      </div>
+      <div id="sec-courses" class="section">
+        <div class="section-topbar">
+          <div class="page-title">Courses</div>
+          <button class="btn primary" onclick="openCourseModal()">
+            <i class="ti ti-plus"></i>Add Course
+          </button>
+        </div>
+        <div id="courses-list"></div>
+      </div>
+      <div id="sec-learners" class="section">
+        <div class="page-title">Learners</div>
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Progress</th>
+                <th>Joined</th>
+              </tr>
+            </thead>
+            <tbody id="learners-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="sec-certificates" class="section">
+        <div class="page-title">Certificates</div>
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Learner</th>
+                <th>Course</th>
+                <th>Issued</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="certs-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="modal-bg" id="course-modal">
+      <div class="modal">
+        <div class="modal-title" id="modal-title">Add New Course</div>
+
+        <div class="form-row">
+          <div>
+            <label>Course Title</label>
+            <input
+              id="f-title"
+              placeholder="e.g. Digital Literacy and Fundamentals"
+            />
+          </div>
+          <div>
+            <label>Category</label>
+            <select id="f-cat">
+              <option value="Digital Skills">
+                Digital Literacy and Fundamentals
+              </option>
+              <option value="Web Dev">Web Development Basis</option>
+              <option value="Financial">Financial Literacy</option>
+              <option value="IP Rights">Intellectual Property Rights</option>
+              <option value="Cybersecurity">Cybersecurity Essentials</option>
+              <option value="Data">Data & Financial Inclusion</option>
+              <option value="Version Control">
+                Version Control Git and GitHub
+              </option>
+              <option value="CV">CV writing</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div>
+            <label>Description</label>
+            <textarea
+              id="f-desc"
+              placeholder="What will learners learn?"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>Duration (Weeks or Hours)</label>
+            <input id="f-dur" type="number" min="1" placeholder="4" />
+          </div>
+          <div>
+            <label>Level</label>
+            <select id="f-level">
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+        </div>
+        <div class="modules-header">
+          <span class="modules-label">Course Modules</span>
+          <button class="btn small" onclick="addModuleField()">
+            <i class="ti ti-plus"></i>Add Module
+          </button>
+        </div>
+        <div id="modules-container"></div>
+
+        <div class="modal-footer">
+          <button class="btn" onclick="closeCourseModal()">Cancel</button>
+          <button class="btn primary" onclick="saveCourse()">
+            <i class="ti ti-check"></i>Save Course
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>

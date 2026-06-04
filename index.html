@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Digibridge</title>
+   <link rel="stylesheet" href="bot.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="signup.html"></a>
+    <a href="dashboard.html"></a>
+    <div class="container">
+    <div class="nav">
+        
+    <div class="nav-left">
+        <img src="Images/DigiBridge Logo Design (1).svg" alt="" >
+    </div>
+    <div class="nav-center"><ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Help Desk</a></li>
+
+    </ul></div>
+    
+    <div class="nav-right">
+        <!-- <button class="btn-log">Login</button> -->
+         <button class="btn-log" onclick="window.location.href='dashboard.html'">Login</button>
+       <button class="btn-sign" onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+        <h2 class="heading">Curriculum OverView</h2>
+        <h1 class="heading2">Explore Learning Pathways</h1>
+        <p class="paragraph">Get a glimpse of our expertly crafted courses. From foundational digital literacy to advanced ICT skills, discover the path that fits your goals.</p>
+        </div></div>
+    <section class="sec1">
+        <section>
+        <div class="container">
+        <h1 class="main">Adaptive
+        <h1 class="main"> Learning</h1>
+        <h1 class="main">For</h1>
+<h1 class="main">Digital</h1> 
+<h1 class="main">Skills.</h1>
+<p class="para">Building a thriving Kenyan digital ecosystem that fosters digital inclusivity and ICT literacy for all.
+
+</p>
+</section>
+<div class="main-img"> <img src="IMG_20230624_113151 (1).jpg" alt="" width="400px"></div>
+    </section>
+<div class="hero-btn-section"><button class="btn-begin">Begin Learning</button></div>
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>LEARNING</h4>
+        <ul>
+          <li><a href="#">Browse Courses</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li><a href="#">AI Assistant</a></li>
+          <li><a href="#">Certification</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>PLATFORM</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Offline Access</a></li>
+          <li><a href="#">Gamification</a></li>
+          <li><a href="#">Learning Hubs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SUPPORT</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">AI Support</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>LEGAL</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="bot-wrap">
+
+  <div id="chat-window">
+    <div class="chat-head">
+      <div class="chat-head-left">
+        <div class="chat-ava">🎓</div>
+        <div>
+          <p class="chat-name">Digi Assistant</p>
+          <p class="chat-status">● Online — always ready</p>
+        </div>
+      </div>
+      <button class="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+
+     <div class="chat-msgs" id="chat-messages">
+      <div class="msg-bot">👋 Hi! I'm Digi, your AI learning assistant. How can I help you today?</div>
+    </div>
+
+    <div class="chat-suggestions">
+      <button class="suggestion-btn" onclick="quickAsk('How do I sign up?')">How do I sign up?</button>
+      <button class="suggestion-btn" onclick="quickAsk('What courses do you offer?')">Our courses</button>
+      <button class="suggestion-btn" onclick="quickAsk('I need help')">Get help</button>
+    </div>
+
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask Digi anything..."
+        onkeydown="if(event.key==='Enter')sendMessage()"/>
+      <button class="chat-send" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <button class="bubble-btn" id="chat-bubble" onclick="toggleChat()">
+    <div class="bubble-dot"></div>
+    🎓 Chat with PamPam
+  </button>
+
+</div>
+    <hr class="footer-divider"/>
+
+    <div class="footer-bottom">
+      <div class="footer-socials">
+        <span>CONNECT WITH US</span>
+        <div class="social-icons">
+          <a href="#">𝕏</a>
+          <a href="#">f</a>
+          <a href="#">in</a>
+          <a href="#">▶</a>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <div class="footer-copy">
+    <p>© 2026 Digibridge. All rights reserved.</p>
+  </div> 
+</footer>
+
+<script src="bot.js"></script>
+<script src="otp.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+   <script src="script.js"></script> 
+</body>
+</html>
