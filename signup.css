@@ -1,5 +1,5 @@
 body {
-  background: #000;
+background: linear-gradient(135deg, #000000, #001a1f, rgb(0, 213, 255, 0.15));
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -12,7 +12,7 @@ body {
   max-width: 400px;
   width: 100%;
   padding: 2rem;
-  background: #111;
+  background:linear-gradient(135deg, #000000 0%, #001820 60%, #002a33 100%);
   border: 0.5px solid #333;
   border-radius: 12px;
 }
