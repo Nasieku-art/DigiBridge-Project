@@ -157,3 +157,9 @@ body {
 .shake-btn {
   animation: btnShake 0.5s ease;
 }
+@media (max-width: 480px) {
+  body { padding: 0.75rem; justify-content: flex-start; padding-top: 2rem; }
+  .form-wrap { padding: 1.25rem; }
+  .face-wrap svg { width: 80px; height: 80px; }
+}
+ 

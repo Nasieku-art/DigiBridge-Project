@@ -145,3 +145,9 @@ body {
 .shake-face {
   animation: faceShake 0.5s ease;
 }
+@media (max-width: 480px) {
+  body { justify-content: flex-start; padding-top: 2rem; }
+  .form-wrap { padding: 1.25rem; }
+  .face-wrap svg { width: 80px; height: 80px; }
+  .otp-inputs { gap: 6px; }
+}
