@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background: #f4f6f8;
+  background: #27a8e3;
   color: #1a1a1a;
   font-size: 14px;
 }
@@ -19,7 +19,7 @@ body {
 #sidebar {
   width: 220px;
   flex-shrink: 0;
-  background: #ffffff;
+  background: #233f4d;
   border-right: 1px solid #e8eaed;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ body {
 .logo {
   font-size: 20px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: black;
 }
 
 .logo span {
