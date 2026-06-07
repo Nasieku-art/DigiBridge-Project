@@ -26,10 +26,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background: #000;
-  border-bottom: 1px solid rgba(0, 213, 255, 0.2);
-  position: sticky;
+  /* padding: 1rem 2rem; */
+  /* background: #000; */
+  /* border-bottom: 1px solid rgba(0, 213, 255, 0.2); */
+  position:sticky;
   top: 0;
   z-index: 999;
 }
@@ -82,7 +82,7 @@ body {
 }
 .btn-sign {
   background: rgb(0, 213, 255);
-  color: white;
+  color: black;
   padding: 0.8em;
   border-radius: 8px;
   cursor: pointer;
